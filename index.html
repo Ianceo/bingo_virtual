@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bingo Virtual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap"/>
+    <link rel="stylesheet" href="./build/styles/main.min.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="cabecalho">
+        <h1 class="titulo" aria-label="Bingo">
+          <span class="letra-titulo bola-B">B</span>
+          <span class="letra-titulo bola-I">I</span>
+          <span class="letra-titulo bola-N">N</span>
+          <span class="letra-titulo bola-G">G</span>
+          <span class="letra-titulo bola-O">O</span>
+        </h1>
+        <p class="titulo-virtual">Virtual</p>
+        <p class="subtitulo">Clique no botão para sortear um número de 1 a 75</p>
+      </header>
+      <section class="sorteio">
+        <div class="area-bola">
+          <div id="bola" class="bola">
+            <span class="bola-numero">?</span>
+          </div>
+        </div>
+        <div class="informacoes">
+          <p id="mensagem" class="mensagem" aria-live="polite">
+            Clique em "Sortear número" para começar!
+          </p>
+          <div class="controles">
+            <button id="botao-sortear" class="botao botao-sortear" type="button">Sortear número</button>
+            <button id="botao-reiniciar" class="botao botao-reiniciar" type="button">Reiniciar</button>
+          </div>
+          <div class="progresso">
+            <p id="contador" class="contador">0 de 75 números sorteados</p>
+            <div class="barra">
+              <div id="barra-progresso" class="barra-preenchida"></div>
+            </div>
+          </div>
+          <div class="ultimos">
+            <h2 class="titulo-secao">Últimos números</h2>
+            <div id="ultimos-numeros" class="lista-ultimos"></div>
+          </div>
+        </div>
+      </section>
+      <section class="painel">
+        <h2 class="titulo-secao">Painel de números</h2>
+        <div class="painel-conteudo">
+          <div class="letras">
+            <span class="letra letra-B">B</span>
+            <span class="letra letra-I">I</span>
+            <span class="letra letra-N">N</span>
+            <span class="letra letra-G">G</span>
+            <span class="letra letra-O">O</span>
+          </div>
+          <div id="cartela" class="cartela"></div>
+        </div>
+      </section>
+      <footer class="rodape">
+        Feito por <strong>Ian Ceo</strong> - 
+        tarefas automatizadas com <strong>Grunt</strong>.
+      </footer>
+    </main>
+    <script type="module" src="./build/scripts/main.min.js"></script>
+  </body>
+</html>
